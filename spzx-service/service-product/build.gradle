@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.dsdaaa'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(path: ':spzx-model')
+    annotationProcessor 'org.projectlombok:lombok:1.18.28'
+    compileOnly 'org.projectlombok:lombok:1.18.28'
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework.boot:spring-boot-starter-web:3.0.5'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.1'
+    implementation 'com.baomidou:mybatis-plus-boot-starter:3.5.3.1'
+    implementation 'mysql:mysql-connector-java:8.0.30'
+    implementation 'com.github.pagehelper:pagehelper-spring-boot-starter:1.4.3'
+    //服务注册
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2022.0.0.0-RC2'
+    //流量控制
+    implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:2022.0.0.0-RC2'
+    implementation 'com.github.xiaoymin:knife4j-openapi3-jakarta-spring-boot-starter:4.3.0'
+    implementation 'ch.qos.logback:logback-classic:1.4.11'
+    implementation 'com.alibaba.nacos:nacos-client:1.4.2'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.0.5'
+    implementation 'org.springframework.boot:spring-boot-starter-cache:3.0.5'
+}
+
+test {
+    useJUnitPlatform()
+}

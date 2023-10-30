@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dsdaaa.mapper.ProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.dsdaaa.domain.Product">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="brand_id" column="brand_id" jdbcType="BIGINT"/>
+        <result property="category1_id" column="category1_id" jdbcType="BIGINT"/>
+        <result property="category2_id" column="category2_id" jdbcType="BIGINT"/>
+        <result property="category3_id" column="category3_id" jdbcType="BIGINT"/>
+        <result property="unit_name" column="unit_name" jdbcType="VARCHAR"/>
+        <result property="slider_urls" column="slider_urls" jdbcType="VARCHAR"/>
+        <result property="spec_value" column="spec_value" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="TINYINT"/>
+        <result property="audit_status" column="audit_status" jdbcType="TINYINT"/>
+        <result property="audit_message" column="audit_message" jdbcType="VARCHAR"/>
+        <result property="create_time" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="update_time" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="is_deleted" column="is_deleted" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,name,brand_id,
+        category1_id,category2_id,category3_id,
+        unit_name,slider_urls,spec_value,
+        status,audit_status,audit_message,
+        create_time,update_time,is_deleted
+    </sql>
+</mapper>
