@@ -1,0 +1,28 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.dsdaaa'
+version = '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(path: ':spzx-common:common-service')
+    implementation project(path: ':spzx-service-client:service-product-client')
+    implementation project(path: ':spzx-model')
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.0.5'
+    implementation 'com.github.xiaoymin:knife4j-openapi3-jakarta-spring-boot-starter:4.3.0'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.0.3'
+    implementation 'org.springframework.cloud:spring-cloud-loadbalancer:4.0.3'
+    implementation 'com.alibaba.fastjson2:fastjson2:2.0.21'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:3.0.5'
+}
+
+test {
+    useJUnitPlatform()
+}

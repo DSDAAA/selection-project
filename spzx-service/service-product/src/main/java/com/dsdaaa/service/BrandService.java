@@ -6,7 +6,7 @@ import com.dsdaaa.domain.Brand;
 import java.util.List;
 
 /**
-* @author 13180
+* @author dunston
 * @description 针对表【brand(分类品牌)】的数据库操作Service
 * @createDate 2023-10-30 21:20:47
 */

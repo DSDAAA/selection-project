@@ -10,8 +10,11 @@ repositories {
 }
 
 dependencies {
+    implementation project(path: ':spzx-model')
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:4.0.3'
+    implementation 'org.springframework.cloud:spring-cloud-loadbalancer:4.0.3'
 }
 
 test {

@@ -5,7 +5,7 @@ import com.dsdaaa.domain.Product;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
-* @author 13180
+* @author dunston
 * @description 针对表【product(商品)】的数据库操作Mapper
 * @createDate 2023-10-30 11:39:36
 * @Entity generator.domain.Product

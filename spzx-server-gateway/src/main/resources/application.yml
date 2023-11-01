@@ -1,3 +1,8 @@
 spring:
+  data:
+    redis:
+      host: 192.168.76.100
+      port: 6379
+      password: 1234
   profiles:
     active: dev

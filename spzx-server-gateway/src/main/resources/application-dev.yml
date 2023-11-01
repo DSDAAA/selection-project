@@ -1,6 +1,11 @@
 server:
   port: 8500
 spring:
+  datasource:
+    url: jdbc:mysql://192.168.76.100:3306/db_spzx?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
   application:
     name: spzx-server-gateway
   cloud:
@@ -30,3 +35,15 @@ spring:
           uri: lb://service-product
           predicates:
             - Path=/*/product/**
+        - id: service-user
+          uri: lb://service-user
+          predicates:
+            - Path=/*/user/**
+        - id: service-cart
+          uri: lb://service-cart
+          predicates:
+            - Path=/api/order/cart/**
+        - id: service-order
+          uri: lb://service-order
+          predicates:
+            - Path=/api/order/orderInfo/**

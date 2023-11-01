@@ -10,6 +10,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.projectlombok:lombok:1.18.28'
+    implementation project(path: ':spzx-model')
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'org.springframework.cloud:spring-cloud-dependencies:2022.0.2'
@@ -18,6 +20,8 @@ dependencies {
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-nacos-discovery:2022.0.0.0-RC2'
     implementation 'com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:2022.0.0.0-RC2'
     implementation 'org.springframework.boot:spring-boot-starter:3.0.5'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis:3.0.5'
+    implementation 'com.mysql:mysql-connector-j:8.0.33'
 }
 
 test {
